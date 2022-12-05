@@ -1,0 +1,5 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/ares/workspace/sentry -B /home/ares/workspace/sentry/build
+-- Found pybind11: /home/ares/.local/include (found version "2.10.1")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ares/workspace/sentry/build

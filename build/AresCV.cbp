@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AresCV"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\.local\;CMake Files\..\..\.local\share\;CMake Files\..\..\.local\share\cmake\;CMake Files\..\..\.local\share\cmake\pybind11\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ares/workspace/sentry/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ares/workspace/sentry/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ares/workspace/sentry/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AresCV">
+				<Option output="/home/ares/workspace/sentry/build/AresCV" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ares/workspace/sentry/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ares/workspace/sentry/3rdparty/UltraMultiThread/include"/>
+					<Add directory="/home/ares/workspace/sentry/3rdparty"/>
+					<Add directory="/home/ares/workspace/sentry/devices"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/ares/.local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 AresCV"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AresCV/fast">
+				<Option output="/home/ares/workspace/sentry/build/AresCV" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ares/workspace/sentry/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ares/workspace/sentry/3rdparty/UltraMultiThread/include"/>
+					<Add directory="/home/ares/workspace/sentry/3rdparty"/>
+					<Add directory="/home/ares/workspace/sentry/devices"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/ares/.local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 AresCV/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ares/workspace/sentry/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ares/workspace/sentry/autoaim/armor/armor.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/autoaim/armor/armor.h">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/autoaim/autoaim.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/autoaim/autoaim.h">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/camera/MER131.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/camera/MER131.h">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/camera/camera_api.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/camera/camera_api.h">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/serial/serial.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/devices/serial/serial.h">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/main.cpp">
+			<Option target="AresCV"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../.local/share/cmake/pybind11/pybind11Common.cmake">
+			<Option virtualFolder="CMake Files\..\..\.local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../.local/share/cmake/pybind11/pybind11Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../.local/share/cmake/pybind11/pybind11ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../.local/share/cmake/pybind11/pybind11NewTools.cmake">
+			<Option virtualFolder="CMake Files\..\..\.local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/home/ares/workspace/sentry/../../.local/share/cmake/pybind11/pybind11Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.local\share\cmake\pybind11\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

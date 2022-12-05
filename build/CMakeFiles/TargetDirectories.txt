@@ -1,0 +1,3 @@
+/home/ares/workspace/sentry/build/CMakeFiles/edit_cache.dir
+/home/ares/workspace/sentry/build/CMakeFiles/rebuild_cache.dir
+/home/ares/workspace/sentry/build/CMakeFiles/AresCV.dir
