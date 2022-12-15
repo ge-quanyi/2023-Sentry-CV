@@ -20,6 +20,7 @@ void autoaim(){ //auto aim run
     while (true){
         cameraData* data = new cameraData;
         try{
+            //cv::waitKey(3);
             *data = camera_sub.pop();
             cv::Mat raw_img = data->img;
             //std::cout<<"img size "<<raw_img.cols<<std::endl;

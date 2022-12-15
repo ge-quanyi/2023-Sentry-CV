@@ -14,11 +14,10 @@ include_directories(3rdparty/UltraMultiThread/include)
 include_directories(3rdparty)
 include_directories(devices)
 
-
 SET (ALL_SRCS main.cpp devices/serial/serial.cpp devices/serial/serial.h
         autoaim/autoaim.cpp autoaim/autoaim.h
         devices/camera/camera_api.cpp devices/camera/MER131.cpp devices/camera/MER131.h
-        autoaim/armor/armor.cpp autoaim/armor/armor.h)
+        autoaim/armor/armor.cpp autoaim/armor/armor.h 3rdparty/tools.h)
 
 add_executable(AresCV ${ALL_SRCS})
 target_link_libraries(AresCV pthread)

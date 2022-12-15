@@ -1,5 +1,6 @@
 //
 // Created by quonone on 22-11-23.
+// use for usb camera
 //
 
 #ifndef WEBVIDEO_CAMERA_H

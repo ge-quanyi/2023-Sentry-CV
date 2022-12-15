@@ -9,6 +9,7 @@
 #include "camera_api.h"
 #include "umt/umt.hpp"
 #include "MER131.h"
+#include "tools.h"
 #define img_width 960
 #define img_height 768
 
@@ -78,16 +79,24 @@ void camera_task_run(){
     if(status != GX_STATUS_SUCCESS)
         return ;
     umt::Publisher<cameraData> data_pub("camera_data");
+    int fps,fps_count;
+    fps = fps_count = 0;
     while(true){
 
         status = GXDQBuf(cam0->hDevice_, &pFrameBuffer, 1000);
         if(status == GX_STATUS_SUCCESS){
-            auto t0 = std::chrono::steady_clock::now();
             if(pFrameBuffer->nStatus == GX_FRAME_STATUS_SUCCESS){
+                fps++;
                 auto img_timestamp = std::chrono::steady_clock::now();
                 if(!if_time_set){
                     start_time = img_timestamp;
                     if_time_set = true;
+                }
+                double time_stamp = std::chrono::duration<double,std::milli>(img_timestamp-start_time).count();//ms
+                if(time_stamp - fps_count >= 1000){
+                    std::cout<<"capture fps is "<<fps<<std::endl;
+                    fps = 0;
+                    fps_count = time_stamp;
                 }
                 char* origin_buff = new char[img_width * img_height * 3];
                 //memset(origin_buff, 0, pFrameBuffer->nWidth * pFrameBuffer->nHeight * 3 * sizeof(char ));
@@ -102,15 +111,10 @@ void camera_task_run(){
                 cv::Mat image_rgb24(pFrameBuffer->nHeight, pFrameBuffer->nWidth, CV_8UC3);
                 memcpy(image_rgb24.data, origin_buff, pFrameBuffer->nHeight * pFrameBuffer->nWidth * 3);
                 ///TODO process origin image
-                double time_stamp = std::chrono::duration<double>(img_timestamp-start_time).count();
-
                 data_pub.push({time_stamp, image_rgb24});
                 delete[] origin_buff;
             }
             status = GXQBuf(cam0->hDevice_, pFrameBuffer);
-            auto t1 = std::chrono::steady_clock::now();
-            double per = std::chrono::duration<double>(t1-t0).count();
-            //std::cout<<"[info] cost time "<<per*1000<<" ms"<<std::endl;
         }
     }
 
